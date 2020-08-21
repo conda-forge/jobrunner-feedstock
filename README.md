@@ -5,7 +5,7 @@ Home: https://github.com/CFSAN-Biostatistics/jobrunner
 
 Package license: BSD
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: An abstraction layer to run jobs on HPC clusters using Grid Engine, Torque, or locally.
 
