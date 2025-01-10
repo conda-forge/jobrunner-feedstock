@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e54decb9c26a0c74ea78a2a7e0e25a82925e2752d385c66ef0fdb1abf8ac0199
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - pytest-runner
   run:
     - psutil
-    - python
+    - python >={{ python_min }}
     - qarrayrun
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - jobrunner
 
