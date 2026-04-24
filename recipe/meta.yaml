@@ -1,5 +1,5 @@
 {% set name = "jobrunner" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e54decb9c26a0c74ea78a2a7e0e25a82925e2752d385c66ef0fdb1abf8ac0199
+  sha256: c6ca4204aff52c4101d569c568280361344ce15c650f6e88f791dd7784235775
 
 build:
   number: 0
